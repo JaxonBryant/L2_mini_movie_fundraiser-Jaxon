@@ -9,8 +9,3 @@ def yes_no(question):
     return response
   else:
     print("Please input yes or no ")
-
-  #loop for testing
-valid = False
-while not valid:
-  show_instructions = yes_no("Have you purchased tickets for this event before? ")
