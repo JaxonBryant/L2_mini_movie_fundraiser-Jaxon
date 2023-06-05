@@ -1,2 +1,2 @@
-import yes_no
+import blank_input
 

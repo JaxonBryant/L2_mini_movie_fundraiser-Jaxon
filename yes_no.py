@@ -1,23 +1,28 @@
+def yes_no(question):
+    detect_truefalse = None  # Initialize the variable
+    while detect_truefalse is None:
+        user_input = input(question).lower().strip()
+        if user_input == "yes" or user_input == "y":
+            detect_truefalse = True
+        elif user_input == "no" or user_input == "n":
+            detect_truefalse = False
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+    return detect_truefalse  # Return the value at the end of the function
 
-def yes_no(question, answer_variable):
-  while True:
-    user_input = input(question).lower().strip()
-    if user_input == "yes" or user_input == "y":
-      answer_variable = True
-      print("You entered yes ")
-      break
-    elif user_input == "no" or user_input == "n":
-      answer_variable = False
-      print("You entered no ")
-      break
-    else:
-      print("Invalid input. Please enter 'yes' or 'no'. ")
-      return answer_variable
-
-#setting up variables
+# Setting up variables
 used_program = False
 
-#Loop for testing
+# Loop for testing
 valid = False
 while not valid:
-  result = yes_no("Have you used this program before? ", used_program)
+    result = yes_no("Have you used this program before? ")
+    if result == True:
+        print("You said yes")
+        continue
+    elif result == False:
+        print("You said no")
+        continue
+    else:
+        print("Error")
+        continue
