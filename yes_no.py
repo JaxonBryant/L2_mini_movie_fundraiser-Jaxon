@@ -10,19 +10,3 @@ def yes_no(question):
             print("Invalid input. Please enter 'yes' or 'no'.")
     return detect_truefalse  # Return the value at the end of the function
 
-# Setting up variables
-used_program = False
-
-# Loop for testing
-valid = False
-while not valid:
-    result = yes_no("Have you used this program before? ")
-    if result == True:
-        print("You said yes")
-        continue
-    elif result == False:
-        print("You said no")
-        continue
-    else:
-        print("Error")
-        continue
