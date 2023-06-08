@@ -2,15 +2,17 @@ from yes_no import yes_no
 
 def ticket_loop(ticket_max):
   response = ""
+  syntax = "a"
   tickets_remain = ticket_max
   tickets_purchased = 0
   while True:
     print("There are {} tickets remaining".format(tickets_remain))
     if tickets_remain <= 0:
-      print("No more tickets are avaliable for purchase ")
+      print("No more tickets are available for purchase ")
       return tickets_purchased
     else:
-      response = yes_no("Would you like to purchase a ticket? ")
+      response = yes_no("Would you like to purchase {} ticket? ".format(syntax))
+      syntax = "another"
       if response == True:
         print("You said yes")
         tickets_remain -= 1
@@ -22,10 +24,5 @@ def ticket_loop(ticket_max):
         print("Error")
         continue
     print("You currently have {} tickets ".format(tickets_purchased))
-
-  if tickets_purchased == 1:
-    plural = ""
-  else:
-    plural = "s"
   
-  print("You have bought {} ticket{} ".format(tickets_purchased, plural))
+  print("You have bought {} ticket(s) ".format(tickets_purchased))
