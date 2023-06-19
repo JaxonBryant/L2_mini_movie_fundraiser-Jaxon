@@ -17,6 +17,8 @@ def ticket_loop(ticket_max):
         print("You said yes")
         tickets_remain -= 1
         tickets_purchased += 1
+        #llllllllllllllllllllllllllllllllllllllllllllllllllll
+        #Note: Connect to calc_ticket_cost here
       elif response == False:
         print("You said no")
         break
