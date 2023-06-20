@@ -1,7 +1,9 @@
+import string_checker
+
 from get_age import get_ticket_price
 from yes_no import yes_no
 
-#Most of this code will be deleted because of ticket_loop
+#Most of this code will be deleted because of ticket_loop and other functions
 total_price = 0.0
 while True:
   ticket_price = get_ticket_price()
