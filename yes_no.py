@@ -1,3 +1,4 @@
+#Replaced by string_checker. No longer used.
 def yes_no(question):
   detect_truefalse = None  # Initialize the variable
   while detect_truefalse is None:
@@ -9,4 +10,3 @@ def yes_no(question):
     else:
       print("Invalid input. Please enter 'yes' or 'no'.")
   return detect_truefalse  # Return the value at the end of the function
-

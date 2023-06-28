@@ -1,20 +1,16 @@
+import re
+
 def check_input(question):
   while True:
     #formatting
-    name = input(question).strip().lower().capitalize()
+    word = input(question).strip().lower().capitalize()
     #check for blank
-    if name == "":
+    if word == "":
       print("Input is blank")
       continue
-    #check for digits
-    if name.isdigit():
+    #check for digits (! accepted because )
+    if re.match(r'^[a-zA-Zāēīōū\s]+$', word):
+      return word
+    else:
       print("Input cannot contain digits")
       continue
-    else:
-      return name
-
-
-#loop for testing
-while True:
-  name = check_input("What is your name? ")
-  print("Name = {}".format(name))
