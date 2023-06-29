@@ -1,6 +1,7 @@
 # rename the function and remove the print statements 
 def get_age():
   while True:
+    #force valid input
     try:
       age = int(input("What is your age? ").strip())
       if age <= 11:
