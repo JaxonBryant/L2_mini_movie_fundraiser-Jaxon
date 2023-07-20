@@ -7,7 +7,7 @@ def string_check(question, num_letter, valid_list):
       #stop "c" automatically equalling cash when it could be both cash or credit
       if response == "c":
         continue
-        #allow partial responses EG cred, ye, ash.
       if response == item[:num_letter] or response in item:
+        #allow partial responses EG cred, ye, ash.
         return item
     print(error)

@@ -1,9 +1,9 @@
 # rename the function and remove the print statements 
-def get_age():
+def get_age(question):
   while True:
     #force valid input
     try:
-      age = int(input("What is your age? ").strip())
+      age = int(input(question).strip())
       if age <= 11:
         print("You must be 12+ to purhase a ticket")
       elif age >= 121:
