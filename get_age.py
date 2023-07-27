@@ -1,7 +1,11 @@
-# rename the function and remove the print statements 
+"""Function for forcing valid input of age."""
+# rename the function and remove the print statements
+
+
 def get_age(question):
+  """Return valid integer input."""
   while True:
-    #force valid input
+    # force valid input
     try:
       age = int(input(question).strip())
       if age <= 11:
